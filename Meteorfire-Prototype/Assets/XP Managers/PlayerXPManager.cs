@@ -4,8 +4,8 @@
 public class PlayerXPManager : XPManager {
 	protected Player player;
 
-	public override void start() {
-		base.start ();
+	public override void Start() {
+		base.Start ();
 		player = GetComponent<Player>();
 	}
 
@@ -18,7 +18,7 @@ public class PlayerXPManager : XPManager {
 	}
 
 	public override void gainXP (Unit killer, Unit victim) {
-		float xp = ((Enemy)victim).getXPValue ();
+		float xp = GameObject.FindGameObjectWithTag("EnemyController").GetComponent<EnemyController>().determineXPValue(victim);
 
 		// gain bonus xp for killing the enemy yourself
 		if (killer.tag == "Player") xp *= 1.5f;

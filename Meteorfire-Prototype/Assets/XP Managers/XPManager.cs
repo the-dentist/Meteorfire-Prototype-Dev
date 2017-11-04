@@ -5,7 +5,7 @@ abstract public class XPManager : MonoBehaviour {
 	protected float current_xp;
 	protected float required_xp;
 
-	public virtual void start () {
+	public virtual void Start () {
 		current_xp = 0;
 		update_required_xp();
 	}
