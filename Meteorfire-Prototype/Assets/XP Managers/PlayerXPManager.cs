@@ -5,8 +5,8 @@ public class PlayerXPManager : XPManager {
 	protected Player player;
 
 	public override void Start() {
-		base.Start ();
 		player = GetComponent<Player>();
+		base.Start ();
 	}
 
 	protected override void levelUp() {
@@ -14,7 +14,7 @@ public class PlayerXPManager : XPManager {
 	}
 
 	protected override void update_required_xp() {
-		required_xp = player.getLevel ();
+		required_xp = player.getLevel();
 	}
 
 	public override void gainXP (Unit killer, Unit victim) {

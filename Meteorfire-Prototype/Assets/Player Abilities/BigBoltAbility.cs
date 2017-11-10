@@ -1,19 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BigBoltAbility : MonoBehaviour
-{
-
-	// Use this for initialization
-	void Start ()
-	{
-	
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-	
-	}
+public class BigBoltAbility : PlayerAbility {
+	public override void levelUp() {}
+	public override void effect() {}
 }
 

@@ -7,6 +7,8 @@ TagManager:
   - Wall
   - EnemyController
   - Enemy
+  - Weapon
+  - guntip
   layers:
   - Default
   - TransparentFX

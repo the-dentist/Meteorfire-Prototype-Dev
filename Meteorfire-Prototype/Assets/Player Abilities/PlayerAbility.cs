@@ -1,21 +1,15 @@
 ﻿using UnityEngine;
-
 abstract public class PlayerAbility : MonoBehaviour {
-	[SerializeField]
-	protected string abilityName;
+	public string abilityName;
 
-	[SerializeField]
-	protected float[] baseCooldowns;
+	public float[] baseCooldowns = new float[3];
 
-	[SerializeField]
-	protected int[] upgradeCosts;
+	public int[] upgradeCosts = new int[4];
 	public int getUpgradeCost() { return upgradeCosts[level]; }
 
 	protected int level;
-	public abstract void levelUp();
-
-	public abstract void effect ();
-
-	public string getName() { return abilityName; }
 	public int getLevel() { return level; }
+
+	public abstract void levelUp();
+	public abstract void effect ();
 }

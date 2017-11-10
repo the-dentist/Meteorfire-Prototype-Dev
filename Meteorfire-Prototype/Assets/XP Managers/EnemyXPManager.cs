@@ -5,8 +5,8 @@ public class EnemyXPManager : XPManager {
 	protected EnemyController ec;
 
 	public override void Start() {
-		base.Start ();
 		ec = GetComponent<EnemyController> ();
+		base.Start ();
 	}
 
 	protected override void levelUp() {
