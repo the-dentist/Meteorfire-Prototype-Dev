@@ -17,8 +17,8 @@ public class EnemyXPManager : XPManager {
 		required_xp = ec.getDifficulty () * 10;
 	}
 
-	public override void gainXP (Unit killer, Unit victim) {
-		current_xp += ec.determineXPValue(victim);
+	public void gainXP (float xp) {
+		current_xp += xp;
 		while (current_xp >= required_xp) {
 			current_xp -= required_xp;
 			levelUp();

@@ -2,7 +2,7 @@
 
 public class Boss : Enemy {
 	protected override void determineTarget() {
-		target = player;
+		target = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ();
 	}
 
 	// TODO other differences in the boss unit, 
