@@ -8096,6 +8096,56 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &832805568 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1698478295700820, guid: 0aae30c66ebe5e34fb2e50b2c1ba27d7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1116958848}
+--- !u!114 &832805569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 832805568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d64a42642694f94f91df30678d84e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &832805570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 832805568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed389352e906feb4cb1a1e32b543e56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &832805571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 832805568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ac1491b81de134dbb5178b0069c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &832805572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 832805568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82a5751df6e11df42b779009652d37bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableWeapons: []
 --- !u!1 &835197318
 GameObject:
   m_ObjectHideFlags: 0
@@ -10645,7 +10695,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1764446565}
     m_Modifications:
     - target: {fileID: 4244430902938580, guid: 0aae30c66ebe5e34fb2e50b2c1ba27d7, type: 2}
       propertyPath: m_LocalPosition.x
@@ -10661,15 +10711,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4244430902938580, guid: 0aae30c66ebe5e34fb2e50b2c1ba27d7, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4244430902938580, guid: 0aae30c66ebe5e34fb2e50b2c1ba27d7, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4244430902938580, guid: 0aae30c66ebe5e34fb2e50b2c1ba27d7, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4244430902938580, guid: 0aae30c66ebe5e34fb2e50b2c1ba27d7, type: 2}
       propertyPath: m_LocalRotation.w
@@ -10677,13 +10727,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4244430902938580, guid: 0aae30c66ebe5e34fb2e50b2c1ba27d7, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1698478295700820, guid: 0aae30c66ebe5e34fb2e50b2c1ba27d7, type: 2}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1698478295700820, guid: 0aae30c66ebe5e34fb2e50b2c1ba27d7, type: 2}
+      propertyPath: m_Name
+      value: WeaponManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114305357765603084, guid: 0aae30c66ebe5e34fb2e50b2c1ba27d7, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0aae30c66ebe5e34fb2e50b2c1ba27d7, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1127002021
@@ -15425,6 +15480,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 961978048}
+  - {fileID: 120054518}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15446,6 +15502,7 @@ MonoBehaviour:
   isPickup: 1
   baseAcceleration: 25
   maxspeed: 27
+  armor: 0
   awardGoldMultiplier: 20
   hpPerLevel: 46
   respawn_time: 0
@@ -16968,6 +17025,7 @@ MonoBehaviour:
   isPickup: 0
   baseAcceleration: 0
   maxspeed: 10
+  armor: 0
   aggrorange: 0
 --- !u!212 &1886528818
 SpriteRenderer:
