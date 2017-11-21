@@ -3,9 +3,18 @@ using UnityEditor;
 
 public class RifleWeapon : Weapon {
 	[SerializeField]
-	protected float bulletwidth, knockback, range, recoilwidth, projectileLingerDuration;
+	protected float bulletwidth = 2f;
 	[SerializeField]
-	protected Color projectileColor;
+	protected float knockback = 10f;
+	[SerializeField]
+	protected float range = 20f;
+	[SerializeField]
+	protected float recoilwidth = 0.05f;
+	[SerializeField]
+	protected float projectileLingerDuration = 0.2f;
+
+	[SerializeField]
+	protected Color projectileColor = Color.red;
 
 	void DrawLine(Vector2 start, Vector2 end, Color color) {
 		GameObject line = new GameObject();
@@ -34,14 +43,14 @@ public class RifleWeapon : Weapon {
 		 */
 
 		// determine where gun will fire
-		Vector2 gunLocation = GameObject.FindWithTag ("guntip").transform.position;
+		Vector2 gunLocation = transform.position;
 		Vector2 crosshairLocation = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 
 		// add recoil
 		Vector2 targetLocation = crosshairLocation + Random.insideUnitCircle * recoilwidth;
 
 		// ensure firing within max range
-		Ray2D firePath = new Ray2D (gunLocation, targetLocation);
+		Ray2D firePath = new Ray2D (gunLocation, targetLocation-gunLocation);
 		targetLocation = firePath.GetPoint (range);
 
 		// Fire bullet

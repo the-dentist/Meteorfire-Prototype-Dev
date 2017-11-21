@@ -15,6 +15,9 @@ public class PlayerAbilityManager : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Alpha1)) {
 			GetComponent<BlinkAbility> ().effect ();
 		}
+		if (Input.GetKeyDown (KeyCode.Alpha2)) {
+			GetComponent<BigBoltAbility> ().effect ();
+		}
 	}
 
 	public void upgradeAbility(string abilityName) {
