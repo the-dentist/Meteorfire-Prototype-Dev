@@ -8112,6 +8112,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d64a42642694f94f91df30678d84e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireDelay: 0
+  bulletwidth: 2
+  knockback: 10
+  range: 20
+  recoilwidth: 0.05
+  projectileLingerDuration: 0.2
+  projectileColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &832805570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8123,6 +8130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed389352e906feb4cb1a1e32b543e56e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireDelay: 0
 --- !u!114 &832805571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8134,6 +8142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ac1491b81de134dbb5178b0069c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireDelay: 0
 --- !u!114 &832805572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9050,13 +9059,13 @@ GameObject:
   - component: {fileID: 961978048}
   - component: {fileID: 961978047}
   - component: {fileID: 961978046}
-  - component: {fileID: 961978045}
   - component: {fileID: 961978044}
   - component: {fileID: 961978043}
   - component: {fileID: 961978042}
   - component: {fileID: 961978041}
   - component: {fileID: 961978040}
   - component: {fileID: 961978039}
+  - component: {fileID: 961978045}
   m_Layer: 0
   m_Name: PlayerAbilityManager
   m_TagString: Untagged
@@ -9076,6 +9085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityName: Rejuvination
+  level: 0
   baseCooldowns:
   - 0
   - 0
@@ -9093,6 +9103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityName: Miasma
+  level: 0
   baseCooldowns:
   - 0
   - 0
@@ -9110,6 +9121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityName: Judgement
+  level: 0
   baseCooldowns:
   - 0
   - 0
@@ -9127,6 +9139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityName: Hypershield
+  level: 0
   baseCooldowns:
   - 0
   - 0
@@ -9144,6 +9157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityName: Haste
+  level: 0
   baseCooldowns:
   - 0
   - 0
@@ -9161,6 +9175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityName: Force Pulse
+  level: 0
   baseCooldowns:
   - 0
   - 0
@@ -9177,12 +9192,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75bb43f72862624b98d124cba7342be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityName: Blink
+  abilityName: 
+  level: 1
   baseCooldowns:
   - 0
   - 0
   - 0
   upgradeCosts: 00000000000000000000000000000000
+  ranges:
+  - 10
+  - 20
+  - 30
 --- !u!114 &961978046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9195,11 +9215,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityName: Big Bolt
+  level: 1
   baseCooldowns:
   - 0
   - 0
   - 0
   upgradeCosts: 00000000000000000000000000000000
+  damages: 010000000200000003000000
+  bigBoltObject: {fileID: 1324039359049870, guid: 97575eb60ebddd64ea967176f2800135,
+    type: 2}
 --- !u!114 &961978047
 MonoBehaviour:
   m_ObjectHideFlags: 0

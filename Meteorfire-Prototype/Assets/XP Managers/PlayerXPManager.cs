@@ -17,7 +17,9 @@ public class PlayerXPManager : XPManager {
 		required_xp = player.getLevel();
 	}
 
-	public void gainXP (Unit killer, float xp) {
+	public override void gainXP (Unit killer, Unit victim) {
+		float xp = GameObject.FindGameObjectWithTag("EnemyController").GetComponent<EnemyController>().determineXPValue(victim);
+
 		// gain bonus xp for killing the enemy yourself
 		if (killer.tag == "Player") xp *= 1.5f;
 

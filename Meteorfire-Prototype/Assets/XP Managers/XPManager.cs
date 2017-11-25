@@ -12,4 +12,5 @@ abstract public class XPManager : MonoBehaviour {
 
 	protected abstract void levelUp ();
 	protected abstract void update_required_xp ();
+	public abstract void gainXP (Unit source, Unit victim);
 }

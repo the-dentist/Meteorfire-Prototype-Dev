@@ -3,15 +3,10 @@
 // This class determines the combat abilities of the enemies 
 // also determines the gold and xp rewards
 public class EnemyController : MonoBehaviour {
-	protected EnemyXPManager exm;
-	protected Player player;
-
-	[SerializeField]
 	protected int difficulty;
 
-	public void Awake() {
-		exm = GetComponent<EnemyXPManager> ();
-		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ();
+	public void Start() {
+		difficulty = 1;
 	}
 
 	public void levelUp() {
@@ -30,12 +25,6 @@ public class EnemyController : MonoBehaviour {
 		if (victim.tag == "Enemy")
 			return victim.getLevel();
 		return 0;
-	}
-
-	public void logKill(Unit killer, Unit victim) {
-		float xp = determineXPValue (victim);
-		exm.gainXP (xp);
-		player.awardKill(killer, xp, determineGoldValue(victim));
 	}
 
 	// TODO build an algorithm to spawn zombies of various

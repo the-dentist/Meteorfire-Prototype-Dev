@@ -4,14 +4,19 @@ public class PlayerAbilityManager : MonoBehaviour {
 	protected PlayerAbility[] abilities;
 	protected PlayerAbility[] selectedAbilities;
 	protected int abilitySlotMaximum;
+	protected Player player;
 
 	public void Awake() {
 		abilities = GetComponents<PlayerAbility> ();
+		player = transform.parent.gameObject.GetComponent<Player> ();
 	}
 
 	public void Update() {
 		if (Input.GetKeyDown (KeyCode.Alpha1)) {
 			GetComponent<BlinkAbility> ().effect ();
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha2)) {
+			GetComponent<BigBoltAbility> ().effect ();
 		}
 	}
 
