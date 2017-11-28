@@ -18,6 +18,9 @@ public class PlayerAbilityManager : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Alpha2)) {
 			GetComponent<BigBoltAbility> ().effect ();
 		}
+		if (Input.GetKeyDown (KeyCode.Alpha3)) {
+			GetComponent<MiasmaAbility> ().effect ();
+		}
 	}
 
 	public void upgradeAbility(string abilityName) {

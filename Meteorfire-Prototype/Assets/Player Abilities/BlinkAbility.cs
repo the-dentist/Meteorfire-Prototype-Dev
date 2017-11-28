@@ -2,7 +2,7 @@
 
 public class BlinkAbility : PlayerAbility {
 	[SerializeField]
-	protected float[] ranges = new float[] {10,20,30};
+	protected float[] ranges = new float[] {3,6,9};
 
 	public override void effect() {
 		Vector2 currentLocation = transform.position;

@@ -3,18 +3,18 @@ using UnityEditor;
 
 public class RifleWeapon : Weapon {
 	[SerializeField]
-	protected float bulletwidth = 2f;
+	protected float bulletwidth = 1f;
 	[SerializeField]
 	protected float knockback = 10f;
 	[SerializeField]
-	protected float range = 20f;
+	protected float range = .5f;
 	[SerializeField]
 	protected float recoilwidth = 0.05f;
 	[SerializeField]
 	protected float projectileLingerDuration = 0.2f;
 
 	[SerializeField]
-	protected Color projectileColor = Color.red;
+	protected Color projectileColor = (new Color(.5F, .5F, .5F, 0.2F));
 
 	void DrawLine(Vector2 start, Vector2 end, Color color) {
 		GameObject line = new GameObject();
