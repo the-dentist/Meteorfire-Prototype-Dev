@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Weapon
   - guntip
+  - Boss
   layers:
   - Default
   - TransparentFX

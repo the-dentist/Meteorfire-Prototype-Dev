@@ -20,13 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4270463596316804}
   - component: {fileID: 212423056939635214}
-  - component: {fileID: 114934438169676574}
   - component: {fileID: 61605378545788540}
   - component: {fileID: 50134593517737644}
-  - component: {fileID: 114662901990055004}
+  - component: {fileID: 114754684230565372}
   m_Layer: 0
   m_Name: Zombie
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
---- !u!114 &114662901990055004
+--- !u!114 &114754684230565372
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -97,29 +96,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1459676726218930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d16372eb17ba0d646b2b4ffbb1aac5de, type: 3}
+  m_Script: {fileID: 11500000, guid: 25ef8301214117f4c8d5a4cc1d9af782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
---- !u!114 &114934438169676574
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1459676726218930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cafd1094a372c54c88c5a11d8900871, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isMoveable: 1
-  movespeed: 8
-  maxspeed: 2
-  health: 0
-  target: {fileID: 0}
-  aggrorange: 4
-  tempHealth: {fileID: 0}
-  tf: {fileID: 0}
+  unitName: 
+  isMoveable: 0
+  isVulnerable: 0
+  isFriendly: 0
+  isPickup: 0
+  moveSpeed: 5
+  level: 1
+  basehp: 1
+  hpPerLevel: 1
+  baseArmor: 0
+  armorPerLevel: 0
+  aggrorange: 0
 --- !u!212 &212423056939635214
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -129,6 +120,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -144,6 +136,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

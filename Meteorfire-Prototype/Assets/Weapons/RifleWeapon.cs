@@ -59,16 +59,13 @@ public class RifleWeapon : Weapon {
 		// if you hit something draw the line only to the object
 		if (bullet.collider != null) {
 			GameObject victim = bullet.transform.gameObject;
+			Debug.Log ("Player Hit : " + victim.transform.name);
 
-			if (victim.tag == "Wall" || victim.tag == "Enemy") {
-				DrawLine (gunLocation, bullet.point, projectileColor);
-				Debug.Log ("Player Hit : " + victim.transform.name);
-
-				// if you hit an anemy it gets pushed back
-				if (victim.tag == "Enemy") {
-					victim.GetComponent<Rigidbody2D> ().position = Vector2.MoveTowards (victim.transform.position, player.transform.position, (-knockback / 5));
-					victim.GetComponent<Unit> ().damage (30, player.GetComponent<Player> ());
-				}
+			DrawLine (gunLocation, bullet.point, projectileColor);
+			if (victim.tag == "Enemy") {
+				// if you hit an enemy it gets pushed back
+				victim.GetComponent<Rigidbody2D> ().position = Vector2.MoveTowards (victim.transform.position, player.transform.position, (-knockback / 5));
+				victim.GetComponent<Unit> ().damage (30, player.GetComponent<Player> ());
 			}
 		} else {
 			DrawLine (gunLocation, targetLocation, projectileColor);
