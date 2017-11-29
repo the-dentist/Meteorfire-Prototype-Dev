@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 public class PlayerHotkeys : MonoBehaviour {
-	public KeyCode primaryFire;
 	public KeyCode primaryBuild;
 
 	public KeyCode moveUp;

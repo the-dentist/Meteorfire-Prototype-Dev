@@ -2,15 +2,16 @@
 
 // an XPManager is set up to monitor the experience gains of a type of unit (player or enemy)
 abstract public class XPManager : MonoBehaviour {
-	protected float current_xp;
-	protected float required_xp;
+	[SerializeField]
+	protected float currentXP = 0;
 
-	public virtual void Start () {
-		current_xp = 0;
-		update_required_xp();
+	protected float requiredXP;
+
+	public virtual void Update() {
+		updateRequiredXP();
 	}
 
 	protected abstract void levelUp ();
-	protected abstract void update_required_xp ();
+	protected abstract void updateRequiredXP ();
 	public abstract void gainXP (Unit source, Unit victim);
 }

@@ -4,25 +4,24 @@
 public class EnemyXPManager : XPManager {
 	protected EnemyController ec;
 
-	public override void Start() {
+	public void Awake() {
 		ec = GetComponent<EnemyController> ();
-		base.Start ();
 	}
 
 	protected override void levelUp() {
 		ec.levelUp ();
 	}
 		
-	protected override void update_required_xp() {
-		required_xp = ec.getDifficulty () * 10;
+	protected override void updateRequiredXP() {
+		requiredXP = ec.getDifficulty () * 10;
 	}
 
 	public override void gainXP (Unit killer, Unit victim) {
-		current_xp += ec.determineXPValue(victim);
-		while (current_xp >= required_xp) {
-			current_xp -= required_xp;
+		currentXP += ec.determineXPValue(victim);
+		while (currentXP >= requiredXP) {
+			currentXP -= requiredXP;
 			levelUp();
-			update_required_xp ();
+			updateRequiredXP ();
 		}
 	}
 }
