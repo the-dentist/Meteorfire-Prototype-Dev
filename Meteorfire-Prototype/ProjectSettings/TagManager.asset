@@ -10,6 +10,7 @@ TagManager:
   - Weapon
   - guntip
   - Boss
+  - Turret
   layers:
   - Default
   - TransparentFX

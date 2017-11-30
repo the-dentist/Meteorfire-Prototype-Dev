@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
 public class FlamethrowerWeapon : Weapon {
-	public override void fire(Unit shooter, Vector2 target) {}
+	public override void fire(Unit shooter, Vector3 target) {}
 }
 

@@ -2,17 +2,14 @@
 using System.Linq;
 
 public class Turret : Unit {
-	[SerializeField]
 	protected Weapon w;
 
-	[SerializeField]
-	protected float maxRange = 20f;
-
-	public void Awake() {
+	public override void Awake() {
 		w = GetComponent<Weapon> ();
+		base.Awake ();
 	}
 
-	public void Update () {
+	public override void Update () {
 		targetClosestEnemy ();
 		if (target != null) {
 			w.fire (this, target.transform.position);
@@ -27,7 +24,7 @@ public class Turret : Unit {
 
 		foreach (GameObject enemy in enemies) {
 			float dist = Vector2.Distance (transform.position, enemy.transform.position);
-			if (dist <= maxRange && (closest == null || dist < minDist)) {
+			if (dist < w.getRange() && (closest == null || dist < minDist)) {
 				closest = enemy;
 				minDist = dist;
 			}
