@@ -7,7 +7,7 @@ public abstract class UnitCondition : MonoBehaviour{
 	protected float startTime;
 	protected Unit target;
 
-	protected bool enabled = false;
+	protected bool active = false;
 
 	public float getStartTime() {
 		return startTime;
@@ -16,7 +16,7 @@ public abstract class UnitCondition : MonoBehaviour{
 	public void enable() {
 		startTime = Time.time;
 		target = GetComponent<Unit> ();
-		enabled = true;
+		active = true;
 		onConditionStart ();
 	}
 
@@ -25,7 +25,7 @@ public abstract class UnitCondition : MonoBehaviour{
 	}
 
 	public void Update() {
-		if (enabled) {
+		if (active) {
 			float now = Time.time;
 			if (startTime + duration <= now) {
 				Destroy (this);

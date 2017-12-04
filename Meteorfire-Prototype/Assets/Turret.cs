@@ -6,6 +6,7 @@ public class Turret : Unit {
 
 	public override void Awake() {
 		w = GetComponent<Weapon> ();
+		Physics.IgnoreLayerCollision(8, 9);
 		base.Awake ();
 	}
 
