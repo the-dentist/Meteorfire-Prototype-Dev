@@ -1,14 +1,16 @@
 ﻿using UnityEngine;
 
 public class BuildingManager : MonoBehaviour {
-	public GameObject Wall;
+	[SerializeField]
+	protected GameObject Wall;
 
-	GameObject Wallclone;
-
-	void Build() {
+	public void buildWallAtCursor() {
 		var camerapos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		camerapos.z = 0;
 	}
 
-}
+	public void buildTurretAtCursor() {
 
+	}
+}
+	

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using UnityEditor;
 
@@ -78,3 +79,6 @@ public class RifleWeapon : Weapon {
 
 }
 
+=======
+﻿
+>>>>>>> master

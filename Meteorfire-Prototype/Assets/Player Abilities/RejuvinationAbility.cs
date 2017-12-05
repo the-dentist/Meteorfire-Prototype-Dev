@@ -1,5 +1,3 @@
-﻿using System.Collections;
-
-public class RejuvinationAbility : PlayerAbility {
+﻿public class RejuvinationAbility : PlayerAbility {
 	public override void effect() {}
 }

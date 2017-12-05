@@ -4,17 +4,16 @@
 public class PlayerXPManager : XPManager {
 	protected Player player;
 
-	public override void Start() {
+	public void Awake() {
 		player = GetComponent<Player>();
-		base.Start ();
 	}
 
 	protected override void levelUp() {
 		player.levelUp ();
 	}
 
-	protected override void update_required_xp() {
-		required_xp = player.getLevel();
+	protected override void updateRequiredXP() {
+		requiredXP = player.getLevel();
 	}
 
 	public override void gainXP (Unit killer, Unit victim) {
@@ -23,13 +22,13 @@ public class PlayerXPManager : XPManager {
 		// gain bonus xp for killing the enemy yourself
 		if (killer.tag == "Player") xp *= 1.5f;
 
-		current_xp += xp;
-		update_required_xp ();
+		currentXP += xp;
+		updateRequiredXP ();
 
-		while (current_xp >= required_xp) {
-			current_xp -= required_xp;
+		while (currentXP >= requiredXP) {
+			currentXP -= requiredXP;
 			levelUp();
-			update_required_xp ();
+			updateRequiredXP ();
 		}
 	}
 }
