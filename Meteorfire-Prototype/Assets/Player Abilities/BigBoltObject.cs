@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BigBoltObject : MonoBehaviour {
-	public int damage;
+	public float damage;
 	protected Unit player;
 
 	IEnumerator killself() {
@@ -10,7 +10,7 @@ public class BigBoltObject : MonoBehaviour {
 		Destroy(gameObject);
 	}
 
-	void OnCollisionStay2D(Collision2D col) {
+	void OnTriggerStay(Collider col) {
 		if (col.gameObject.tag == "Enemy") {
 			col.gameObject.GetComponent<Unit>().damage(damage, (Unit)player);
 		}
