@@ -4,7 +4,7 @@ public class BuildingManager : MonoBehaviour {
 	[SerializeField]
 	protected GameObject Wall;
 
-	protected PlayerBuilding mouseTarget = null;
+	protected GameObject mouseTarget = null;
 
 	public void buildWallAtCursor() {
 		var camerapos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
@@ -15,12 +15,12 @@ public class BuildingManager : MonoBehaviour {
 
 	}
 
-	public void setMouseOver(PlayerBuilding pb) {
-		mouseTarget = pb;
+	public void setMouseOver(GameObject g) {
+		mouseTarget = g;
 	}
 
-	public void removeMouseOver(PlayerBuilding pb) {
-		if (mouseTarget == pb)
+	public void removeMouseOver(GameObject g) {
+		if (mouseTarget == g)
 			mouseTarget = null;
 	}
 }

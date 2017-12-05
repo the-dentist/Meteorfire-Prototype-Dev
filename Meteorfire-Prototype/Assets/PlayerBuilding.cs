@@ -7,11 +7,5 @@ public class PlayerBuilding : MonoBehaviour {
 		bm = GameObject.FindGameObjectWithTag("Player").GetComponent<BuildingManager>();
 	}
 
-	public void OnMouseEnter() {
-		bm.setMouseOver (this);
-	}
 
-	public void OnMouseExit() {
-		bm.removeMouseOver (this);
-	}
 }
