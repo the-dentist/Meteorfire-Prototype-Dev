@@ -13,7 +13,7 @@ public class Spawner : MonoBehaviour {
 			float now = Time.time;
 			if (now - spawnTime >= lastSpawn) {
 				lastSpawn = now;
-				Instantiate (spawn);
+				Instantiate (spawn, transform.position, transform.rotation);
 			}
 		}
 	}

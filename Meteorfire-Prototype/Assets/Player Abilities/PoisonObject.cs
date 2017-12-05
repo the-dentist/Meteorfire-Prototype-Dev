@@ -10,10 +10,24 @@ public class PoisonObject : MonoBehaviour {
 		Destroy(gameObject);
 	}
 
+	float delay = 0.5f;
+	float last = 0f;
 
 	void OnTriggerStay(Collider col) {
-		if (col.gameObject.tag == "Enemy") {
-			col.gameObject.GetComponent<Unit>().damage(damage, (Unit)player);
+		float now = Time.time;
+	
+		if (delay + last >= now) {
+			if (col.gameObject.tag == "Enemy") {
+				col.gameObject.GetComponent<Unit> ().damage (damage, (Unit)player);
+
+				SlowCondition sc = col.gameObject.GetComponent<SlowCondition> ();
+				if (sc == null) {
+					sc = col.gameObject.AddComponent<SlowCondition> ();
+					sc.duration = 1;
+					sc.value = 2;
+				}
+				last = now;
+			}
 		}
 	}
 

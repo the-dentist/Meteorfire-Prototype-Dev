@@ -12,6 +12,24 @@ TagManager:
   - Boss
   - Turret
   - InvisibleWall
+  - Ship
+  - GameMenuPanel
+  - UpgradePanel
+  - ActionBar2
+  - ActionBar3
+  - CurrentHPDisplay
+  - PlayerInfoPanel
+  - MaxHPDisplay
+  - ActionBar4
+  - ActionBar1
+  - PlayerHealthBar
+  - PlayerXPUI
+  - PlayerGoldUI
+  - PlayerLevelUI
+  - UpgradesAbility1Image
+  - UpgradesAbility1Name
+  - UpgradesAblility1Button
+  - UpgradesAbility1RankValue
   layers:
   - Default
   - TransparentFX

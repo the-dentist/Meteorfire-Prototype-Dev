@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212681108751954026}
   - component: {fileID: 114045892594557722}
   - component: {fileID: 143710834973050948}
+  - component: {fileID: 114600993154278036}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Wall
@@ -54,7 +55,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Wall
-  isMoveable: 0
+  canMove: 0
+  canAttack: 0
   isVulnerable: 1
   isFriendly: 1
   isPickup: 0
@@ -63,6 +65,17 @@ MonoBehaviour:
   hpPerLevel: 10
   level: 1
   target: {fileID: 0}
+--- !u!114 &114600993154278036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1850706593413038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea2abcdee5cd254d8c5528926e866d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!143 &143710834973050948
 CharacterController:
   m_ObjectHideFlags: 1
