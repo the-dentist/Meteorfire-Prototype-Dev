@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour {
 		if (spawn != null) {
 			if (now - spawnTime >= lastSpawn) {
 				lastSpawn = now;
-				Instantiate (spawn);
+				Instantiate (spawn, transform.position, transform.rotation);
 			}
 		}
 		if (now - bossspawnTime >= lastbossSpawn) {
@@ -30,6 +30,6 @@ public class Spawner : MonoBehaviour {
 	void spawnboss(){
 		GameObject[] getCount = GameObject.FindGameObjectsWithTag ("Boss");
 		int count = getCount.Length;
-		if (count < 1) Instantiate (boss);
+		if (count < 1) Instantiate (boss, transform.position, transform.rotation);
 	}
 }
