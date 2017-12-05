@@ -13,8 +13,10 @@ public class Turret : Unit {
 	public override void Update () {
 		targetClosestEnemy ();
 		if (target != null) {
+			transform.rotation = Quaternion.LookRotation(Vector3.forward, target.transform.position - transform.position);
 			w.fire (this, target.transform.position);
 		}
+
 	}
 
 	void targetClosestEnemy() {
