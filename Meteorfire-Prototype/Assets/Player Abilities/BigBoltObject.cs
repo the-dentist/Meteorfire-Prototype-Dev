@@ -11,7 +11,7 @@ public class BigBoltObject : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider col) {
-		if (col.gameObject.tag == "Enemy") {
+		if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Boss"  ) {
 			col.gameObject.GetComponent<Unit>().damage(damage, (Unit)player);
 		}
 	}
