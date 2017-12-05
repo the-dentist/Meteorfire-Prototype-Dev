@@ -81,8 +81,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Enemy
-  canMove: 0
-  canAttack: 0
+  canMove: 1
+  canAttack: 1
   isVulnerable: 1
   isFriendly: 0
   isPickup: 0
