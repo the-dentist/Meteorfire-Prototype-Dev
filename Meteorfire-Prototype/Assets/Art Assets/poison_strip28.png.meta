@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b3637dfa85a1a244a87d48b45a0b1c4e
-timeCreated: 1512444005
+timeCreated: 1512463059
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -407,7 +407,7 @@ TextureImporter:
       name: poison_strip28_20
       rect:
         serializedVersion: 2
-        x: 5120
+        x: 5119
         y: 0
         width: 256
         height: 256
@@ -435,7 +435,7 @@ TextureImporter:
       name: poison_strip28_22
       rect:
         serializedVersion: 2
-        x: 5632
+        x: 5642
         y: 0
         width: 256
         height: 256
@@ -449,7 +449,7 @@ TextureImporter:
       name: poison_strip28_23
       rect:
         serializedVersion: 2
-        x: 5888
+        x: 5894
         y: 0
         width: 256
         height: 256
@@ -463,7 +463,7 @@ TextureImporter:
       name: poison_strip28_24
       rect:
         serializedVersion: 2
-        x: 6144
+        x: 6149
         y: 0
         width: 256
         height: 256
@@ -477,7 +477,7 @@ TextureImporter:
       name: poison_strip28_25
       rect:
         serializedVersion: 2
-        x: 6400
+        x: 6406
         y: 0
         width: 256
         height: 256
@@ -491,7 +491,7 @@ TextureImporter:
       name: poison_strip28_26
       rect:
         serializedVersion: 2
-        x: 6656
+        x: 6668
         y: 0
         width: 256
         height: 256
@@ -505,13 +505,13 @@ TextureImporter:
       name: poison_strip28_27
       rect:
         serializedVersion: 2
-        x: 6912
+        x: 6918
         y: 0
-        width: 256
+        width: 246
         height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47900787}
+      border: {x: 5, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0

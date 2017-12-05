@@ -1,0 +1,537 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1132688536845628}
+  m_IsPrefabParent: 1
+--- !u!1 &1132688536845628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4605497486442422}
+  - component: {fileID: 212366353887371714}
+  - component: {fileID: 114769402331600032}
+  - component: {fileID: 114545665359339442}
+  - component: {fileID: 114918281114146848}
+  - component: {fileID: 143717050134562458}
+  - component: {fileID: 95010679128977864}
+  m_Layer: 9
+  m_Name: Player 1
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1231116242787982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4657578672218630}
+  - component: {fileID: 212042151775095506}
+  - component: {fileID: 114540525796419922}
+  - component: {fileID: 114282394031752386}
+  - component: {fileID: 114839867400469548}
+  - component: {fileID: 114078986361363068}
+  m_Layer: 9
+  m_Name: WeaponManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1568530119509762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4263073114174346}
+  - component: {fileID: 114506994295722204}
+  - component: {fileID: 114576039970107750}
+  - component: {fileID: 114095777932109280}
+  - component: {fileID: 114177736607287160}
+  - component: {fileID: 114415221205372694}
+  - component: {fileID: 114833527504649344}
+  - component: {fileID: 114498580061947372}
+  - component: {fileID: 114160020965776532}
+  - component: {fileID: 114756789465215740}
+  m_Layer: 9
+  m_Name: PlayerAbilityManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4263073114174346
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568530119509762}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4605497486442422}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4605497486442422
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132688536845628}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.73, y: 0.23, z: 0}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 1}
+  m_Children:
+  - {fileID: 4263073114174346}
+  - {fileID: 4657578672218630}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4657578672218630
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231116242787982}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4605497486442422}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95010679128977864
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132688536845628}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9cb169844a5b8b64e80bcce9e4c0c935, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114078986361363068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231116242787982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82a5751df6e11df42b779009652d37bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeapon: 0
+  recoilwidth: 0.05
+--- !u!114 &114095777932109280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568530119509762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73b3351fcc92ae47a16a1ba6e61f926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityName: Force Pulse
+  level: 0
+  baseCooldowns:
+  - 0
+  - 0
+  - 0
+  upgradeCosts: 00000000000000000000000000000000
+--- !u!114 &114160020965776532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568530119509762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75bb43f72862624b98d124cba7342be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityName: 
+  level: 1
+  baseCooldowns:
+  - 0
+  - 0
+  - 0
+  upgradeCosts: 00000000000000000000000000000000
+  ranges:
+  - 10
+  - 20
+  - 30
+--- !u!114 &114177736607287160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568530119509762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26dcad0b2d5a54a47a27b0d0b1be353a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityName: Haste
+  level: 0
+  baseCooldowns:
+  - 0
+  - 0
+  - 0
+  upgradeCosts: 00000000000000000000000000000000
+--- !u!114 &114282394031752386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231116242787982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed389352e906feb4cb1a1e32b543e56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireDelay: 0
+  bulletwidth: 2
+  range: 20
+  projectileLingerDuration: 0.2
+  damages:
+  - 1
+  level: 1
+  projectileColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &114415221205372694
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568530119509762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3177fc91a52bca740b2814c67c48c0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityName: Hypershield
+  level: 0
+  baseCooldowns:
+  - 0
+  - 0
+  - 0
+  upgradeCosts: 00000000000000000000000000000000
+--- !u!114 &114498580061947372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568530119509762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08aa7a2cb06f3e84bbae2ceda83364b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityName: Rejuvination
+  level: 0
+  baseCooldowns:
+  - 0
+  - 0
+  - 0
+  upgradeCosts: 00000000000000000000000000000000
+--- !u!114 &114506994295722204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568530119509762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1868133ade4a42942a86b04122708f5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114540525796419922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231116242787982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5c981e270751243a0fb5d10f6e5e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireDelay: 0
+  bulletwidth: 2
+  range: 4
+  projectileLingerDuration: 0.2
+  damages:
+  - 30
+  level: 1
+  projectileColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &114545665359339442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132688536845628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 362b6b782bab9a1468bfb18c6c74b97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentXP: 0
+--- !u!114 &114576039970107750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568530119509762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49cc3b16bd5dcfb43b3ffca2774d1fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityName: Big Bolt
+  level: 1
+  baseCooldowns:
+  - 0
+  - 0
+  - 0
+  upgradeCosts: 00000000000000000000000000000000
+  damages: 14000000280000003c000000
+  bigBoltObject: {fileID: 1324039359049870, guid: 97575eb60ebddd64ea967176f2800135,
+    type: 2}
+--- !u!114 &114756789465215740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568530119509762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebe729a12693a9a4495dfdb9b6d6b1e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityName: 
+  level: 3
+  baseCooldowns:
+  - 0
+  - 0
+  - 0
+  upgradeCosts: 00000000000000000000000000000000
+  damages: 010000000200000003000000
+  PoisonObject: {fileID: 1725978366213308, guid: 2f8001439c252d04395a92d65ff57912,
+    type: 2}
+--- !u!114 &114769402331600032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132688536845628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e61e693347560d4da5efdfcf6a5cdf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: Player
+  canMove: 0
+  canAttack: 0
+  isVulnerable: 1
+  isFriendly: 1
+  isPickup: 0
+  moveSpeed: 5
+  basehp: 1
+  hpPerLevel: 46
+  level: 1
+  target: {fileID: 0}
+  gold: 0
+  awardGoldMultiplier: 20
+  respawn_time: 0
+--- !u!114 &114833527504649344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568530119509762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119d71130f1b74747be3ced1079c16ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityName: Judgement
+  level: 0
+  baseCooldowns:
+  - 0
+  - 0
+  - 0
+  upgradeCosts: 00000000000000000000000000000000
+--- !u!114 &114839867400469548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231116242787982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ac1491b81de134dbb5178b0069c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireDelay: 0
+  bulletwidth: 2
+  range: 20
+  projectileLingerDuration: 0.2
+  damages:
+  - 1
+  level: 1
+  projectileColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &114918281114146848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132688536845628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d731a02f3acf5354f8d96c74b0ac9719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryBuild: 324
+  moveUp: 119
+  moveDown: 115
+  moveLeft: 97
+  moveRight: 100
+  openAbilityMenu: 122
+  openPauseMenu: 27
+  openUpgradeMenu: 120
+  cycleWeapon: 113
+  ability1: 49
+  ability2: 50
+  ability3: 51
+  ability4: 52
+--- !u!143 &143717050134562458
+CharacterController:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132688536845628}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 0.32
+  m_Radius: 0.25
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!212 &212042151775095506
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231116242787982}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 691b1088b2439c8479bd341ac9030ea1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.28, y: 1.28}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!212 &212366353887371714
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1132688536845628}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300002, guid: da203c70f36600d43b3538c224587bfd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 11.47, y: 20}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0

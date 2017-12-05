@@ -10,10 +10,11 @@ public class PoisonObject : MonoBehaviour {
 		Destroy(gameObject);
 	}
 
-
 	void OnTriggerStay(Collider col) {
 		if (col.gameObject.tag == "Enemy") {
 			col.gameObject.GetComponent<Unit>().damage(damage, (Unit)player);
+			col.gameObject.AddComponent <SlowCondition>();
+
 		}
 	}
 

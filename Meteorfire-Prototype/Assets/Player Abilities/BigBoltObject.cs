@@ -20,5 +20,6 @@ public class BigBoltObject : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<Unit> ();
 		StartCoroutine (killself ());
 	}
+
 }
 
