@@ -17,7 +17,7 @@ public class WeaponManager : MonoBehaviour {
 	}
 
 	public void Update() {
-		if (Input.GetButtonDown ("Fire1")) {
+		if (Input.GetButton ("Fire1")) {
 			Vector2 mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			Vector2 targetLocation = mousePos + Random.insideUnitCircle * recoilwidth;
 			fire (targetLocation);

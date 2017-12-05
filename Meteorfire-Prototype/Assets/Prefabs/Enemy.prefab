@@ -61,7 +61,7 @@ MonoBehaviour:
   isFriendly: 0
   isPickup: 0
   moveSpeed: 0.5
-  basehp: 100
+  basehp: 300
   hpPerLevel: 1
   level: 1
   target: {fileID: 0}
